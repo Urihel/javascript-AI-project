@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            js prompt AI
+        </title>
+        <style>
+            #button {
+                border: 1px solid black;
+                border-radius: 10px;
+                font-size: 22px;
+                height:65px;
+                width:100px;
+                text-align: center;
+                line-height: 65px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <audio id="myAudio" src="./how_are_you.m4a"></audio>
+        <p>To Interact with the AI please click the button</p>
+        <div id=button>click</div>
+
+
+
+
+       <script>
+          
+           var button = document.getElementById("button");
+           function playBack() {
+               button.addEventListener("click", function (){
+                var talk = prompt("If you wish for the AI to respond type hi");
+               var myAudio = document.getElementById("myAudio");
+                
+                if(talk === "hi") {
+                        myAudio.play();
+                } else if(talk === "hello"){
+                    myAudio.play();
+                }
+               }) ;
+               
+                    
+                
+           }
+           playBack();
+       </script>
+    </body>
+
+</html>
